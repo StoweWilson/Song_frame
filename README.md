@@ -122,61 +122,78 @@ you should load this file onto an sd card and load it on to your raspberry pi
 _Below is an example of how you can install and run this code._
 
 1. sign in to Spotify for Devlopers [https://developer.spotify.com/](https://developer.spotify.com/)
+   
 2. Right now until more feartures are made we will be using Spotify Web API.
+   
 3. create a Spotify Web API and fill out what is required. (this is where we will be getting our Client ID and Client secret)
+   
 4. Your Client ID and Client secrect are in your settings.
+   
 5. Replace the Client_ID and Client_Secrect with yours:
-   ```sh
+   	```sh
    	CLIENT_ID = "Put Your Client ID Here"
 	CLIENT_SECRET = "Put Your Client Secret Here"
-   ```
-7. Run the code this will log you into your spotify once so you dont have to do it agin the token will be saved in your `tokens.json` which will be create when code is run.
-8. make sure every thing runs and looks the way you want it. if you want to change any of the look cahnge the code in:
-   ```sh
-   def main_display():
-   ```
-10.you should load this file onto an sd card and load it on to your raspberry pi 
-*if you only have acssess to your bootfs do this
+   	```
+    
+6. Run the code this will log you into your spotify once so you dont have to do it agin the token will be saved in your `tokens.json` which will be create when code is run.
+   
+7. make sure every thing runs and looks the way you want it. if you want to change any of the look cahnge the code in:
+   	```sh
+   	def main_display():
+   	```
+    
+8. you should load this file onto an sd card and load it on to your raspberry pi 
+   **If you only have acssess to your bootfs do this
 
-1. place the files in your overlays
-2. Then move it to your pi using the code below (change pi to your name for your device)
-```sh
-	sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
-	sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
-```
-11. Once in your deginated loction. Set up a virtual environment:
-    	1. Create a Virtual Environment:
-   		 ```sh
+	1. place the files in your overlays
+    
+	2. Then move it to your pi using the code below (change pi to your name for your device)
+		```sh
+		sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
+		sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
+		```
+11. Once in your deginated loction. Set up a virtual environment
+    
+    1. Create a Virtual Environment:
+   	```sh
    		python3 -m venv /home/pi/venv
-   		```
-    	2. Activate the Virtual Environment:
-    		```sh
+   	```
+    
+    2. Activate the Virtual Environment:
+    	```sh
    		source /home/pi/venv/bin/activate
-   		```
-    	3. Install Required Libraries:
-    		```sh
+   	```
+    
+3. Install Required Libraries:
+    	```sh
    		pip install pygame flask requests pillow
-   		```
+   	```
 
-12. Run the script to make sure it works
+13. Run the script to make sure it works
    ```sh
   	python /home/pi/spot.py
    ```
+
 13.(Optional) Run script on startup:
+
 	1. Open crontab editor:
  	```sh
   	nano crontab -e
   	 ```
+    
     	2. add the following line to the end of the file:
      	```sh
   	@reboot /home/pi/venv/bin/python /home/pi/script.py
   	 ```
+    
     	Replace:
 		• /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
 		• /home/pi/script.py with the full path to your Python script.
+  
  	3. Save and exit:
   		• Press CTRL + O to save.
 		• Press CTRL + X to exit.
+  
   	4. Reboot to test:
    	```sh
   	sudo reboot
