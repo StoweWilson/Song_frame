@@ -12,11 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Song Frame</h3>
+<h1 align="center">Song Frame</h1>
 
   <p align="center">
     Showcases your currently playing song’s album art and title in a sleek, modern design powered by the Spotify API. (Currently supports only Spotify API)
