@@ -143,7 +143,7 @@ _Below is an example of how you can install and run this code._
    	```
     
 8. you should load this file onto an sd card and load it on to your raspberry pi:
-   ###If you only have acssess to your bootfs do this
+	### <ins> If you only have acssess to your bootfs do this </ins>
 
 	1. place the files in your overlays
     
