@@ -181,7 +181,7 @@ _Below is an example of how you can install and run this code._
     
     	Replace:
 		* /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
-		* /home/pi/script.py with the full path to your Python script.
+		* /home/pi/spot.py with the full path to your Python script.
   
    3. Save and exit:
   		* Press CTRL + O to save.
