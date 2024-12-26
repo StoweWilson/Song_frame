@@ -103,39 +103,84 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This is an example of how would use this file on your raspberry pi (all refences of pi is name of your raspberry pi)
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+you should load this file onto an sd card and load it on to your raspberry pi 
+*if you only have acssess to your bootfs do this
+
+1. place the files in your overlays
+2. Then move it to your pi using the code below (change pi to your name for your device)
+```sh
+	sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
+	sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
+```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_Below is an example of how you can install and run this code._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. sign in to Spotify for Devlopers [https://developer.spotify.com/](https://developer.spotify.com/)
+2. Right now until more feartures are made we will be using Spotify Web API.
+3. create a Spotify Web API and fill out what is required. (this is where we will be getting our Client ID and Client secret)
+4. Your Client ID and Client secrect are in your settings.
+5. Replace the Client_ID and Client_Secrect with yours:
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   	CLIENT_ID = "Put Your Client ID Here"
+	CLIENT_SECRET = "Put Your Client Secret Here"
    ```
-3. Install NPM packages
+7. Run the code this will log you into your spotify once so you dont have to do it agin the token will be saved in your `tokens.json` which will be create when code is run.
+8. make sure every thing runs and looks the way you want it. if you want to change any of the look cahnge the code in:
    ```sh
-   npm install
+   def main_display():
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+10.you should load this file onto an sd card and load it on to your raspberry pi 
+*if you only have acssess to your bootfs do this
+
+1. place the files in your overlays
+2. Then move it to your pi using the code below (change pi to your name for your device)
+```sh
+	sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
+	sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
+```
+11. Once in your deginated loction. Set up a virtual environment:
+    	1. Create a Virtual Environment:
+   		 ```sh
+   		python3 -m venv /home/pi/venv
+   		```
+    	2. Activate the Virtual Environment:
+    		```sh
+   		source /home/pi/venv/bin/activate
+   		```
+    	3. Install Required Libraries:
+    		```sh
+   		pip install pygame flask requests pillow
+   		```
+
+12. Run the script to make sure it works
    ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
+  	python /home/pi/spot.py
    ```
+13.(Optional) Run script on startup:
+	1. Open crontab editor:
+ 	```sh
+  	nano crontab -e
+  	 ```
+    	2. add the following line to the end of the file:
+     	```sh
+  	@reboot /home/pi/venv/bin/python /home/pi/script.py
+  	 ```
+    	Replace:
+		• /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
+		• /home/pi/script.py with the full path to your Python script.
+ 	3. Save and exit:
+  		• Press CTRL + O to save.
+		• Press CTRL + X to exit.
+  	4. Reboot to test:
+   	```sh
+  	sudo reboot
+  	 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,15 +228,6 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- LICENSE -->
 ## License
@@ -205,7 +241,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Stowe Wilson - ifunkychunky@gmail.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
