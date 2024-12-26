@@ -162,42 +162,43 @@ _Below is an example of how you can install and run this code._
     2. Activate the Virtual Environment:
     	```sh
    		source /home/pi/venv/bin/activate
-   	```
+   		```
     
-3. Install Required Libraries:
-    	```sh
+    3. Install Required Libraries:
+       ```sh
    		pip install pygame flask requests pillow
-   	```
+   		```
+
 
 13. Run the script to make sure it works
-   ```sh
+   	```sh
   	python /home/pi/spot.py
-   ```
+   	```
 
-13.(Optional) Run script on startup:
+14.(Optional) Run script on startup
 
-	1. Open crontab editor:
- 	```sh
+   1. Open crontab editor:
+ ```sh
   	nano crontab -e
-  	 ```
+ ```
     
-    	2. add the following line to the end of the file:
+   2. add the following line to the end of the file:
      	```sh
-  	@reboot /home/pi/venv/bin/python /home/pi/script.py
-  	 ```
+  		@reboot /home/pi/venv/bin/python /home/pi/script.py
+  	 	```
     
     	Replace:
 		• /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
 		• /home/pi/script.py with the full path to your Python script.
   
- 	3. Save and exit:
+   3. Save and exit:
   		• Press CTRL + O to save.
 		• Press CTRL + X to exit.
   
-  	4. Reboot to test:
-   	```sh
+   4. Reboot to test:
+   ```sh
   	sudo reboot
-  	 ```
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
