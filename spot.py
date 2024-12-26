@@ -10,8 +10,8 @@ import json
 from flask import Flask, request
 
 # Spotify API credentials
-CLIENT_ID = "d75124890f674fe48b0b0353f2e6ae6e"
-CLIENT_SECRET = "1f093c931a73441694808a99a654340d"
+CLIENT_ID = "Put your client ID here"
+CLIENT_SECRET = "Put your Client secret here"
 REDIRECT_URI = "http://localhost:7777/callback"
 SCOPES = "user-read-currently-playing user-read-recently-played"
 
