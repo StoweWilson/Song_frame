@@ -75,17 +75,16 @@ Here’s why this project stands out:
 
 Of course, there’s always room for improvement. While this version supports Spotify, future iterations might expand to other platforms. Contributions and feedback are always welcome! Feel free to fork this project, submit pull requests, or open issues to help shape its future.
 
-Let Song Frame enhance your music experience—this might just be the last music display you’ll ever need.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * Python (https://www.python.org/)
+* Flask
+* Pygame
+* Json
 * Spotify Developer (https://developer.spotify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
