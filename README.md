@@ -178,9 +178,9 @@ _Below is an example of how you can install and run this code._
 14.(Optional) Run script on startup
 
    1. Open crontab editor:
- ```sh
-  	nano crontab -e
- ```
+ 		```sh
+  		nano crontab -e
+ 		```
     
    2. add the following line to the end of the file:
      	```sh
@@ -188,17 +188,17 @@ _Below is an example of how you can install and run this code._
   	 	```
     
     	Replace:
-		• /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
-		• /home/pi/script.py with the full path to your Python script.
+		* /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
+		* /home/pi/script.py with the full path to your Python script.
   
    3. Save and exit:
-  		• Press CTRL + O to save.
-		• Press CTRL + X to exit.
+  		* Press CTRL + O to save.
+		* Press CTRL + X to exit.
   
    4. Reboot to test:
-   ```sh
-  	sudo reboot
-  ```
+   		```sh
+  		sudo reboot
+  		```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +209,6 @@ _Below is an example of how you can install and run this code._
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
