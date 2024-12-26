@@ -8,14 +8,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -143,7 +135,7 @@ _Below is an example of how you can install and run this code._
    	```
     
 8. you should load this file onto an sd card and load it on to your raspberry pi:
-	### <ins> If you only have acssess to your bootfs do this </ins>
+	### <ins> If you only have acssess to your bootfs do this: </ins>
 
 	1. place the files in your overlays
     
