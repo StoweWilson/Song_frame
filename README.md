@@ -8,23 +8,14 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://cloud-1k159va1c-hack-club-bot.vercel.app/0img_5341.heic" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">Song Frame</h3>
+<h1 align="center">Song Frame</h1>
 
   <p align="center">
     Showcases your currently playing song’s album art and title in a sleek, modern design powered by the Spotify API. (Currently supports only Spotify API)
@@ -83,18 +74,17 @@ Here’s why this project stands out:
 
 Of course, there’s always room for improvement. While this version supports Spotify, future iterations might expand to other platforms. Contributions and feedback are always welcome! Feel free to fork this project, submit pull requests, or open issues to help shape its future.
 
-Let Song Frame enhance your music experience—this might just be the last music display you’ll ever need.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Pyhton][Pyhton.com]][Python-url]
-* [![Spotify API][StpotifyAPI.com]][Spotify API-url]
+* Python (https://www.python.org/)
+* Flask
+* Pygame
+* Json
+* Spotify Developer (https://developer.spotify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,65 +112,83 @@ you should load this file onto an sd card and load it on to your raspberry pi
 _Below is an example of how you can install and run this code._
 
 1. sign in to Spotify for Devlopers [https://developer.spotify.com/](https://developer.spotify.com/)
+   
 2. Right now until more feartures are made we will be using Spotify Web API.
+   
 3. create a Spotify Web API and fill out what is required. (this is where we will be getting our Client ID and Client secret)
+   
 4. Your Client ID and Client secrect are in your settings.
+   
 5. Replace the Client_ID and Client_Secrect with yours:
-   ```sh
+   	```sh
    	CLIENT_ID = "Put Your Client ID Here"
 	CLIENT_SECRET = "Put Your Client Secret Here"
-   ```
-7. Run the code this will log you into your spotify once so you dont have to do it agin the token will be saved in your `tokens.json` which will be create when code is run.
-8. make sure every thing runs and looks the way you want it. if you want to change any of the look cahnge the code in:
-   ```sh
-   def main_display():
-   ```
-10.you should load this file onto an sd card and load it on to your raspberry pi 
-*if you only have acssess to your bootfs do this
+   	```
+    
+6. Run the code this will log you into your spotify once so you dont have to do it agin the token will be saved in your `tokens.json` which will be create when code is run.
+   
+7. make sure every thing runs and looks the way you want it. if you want to change any of the look cahnge the code in:
+   	```sh
+   	def main_display():
+   	```
+    
+8. you should load this file onto an sd card and load it on to your raspberry pi:
+	### <ins> If you only have acssess to your bootfs do this: </ins>
 
-1. place the files in your overlays
-2. Then move it to your pi using the code below (change pi to your name for your device)
-```sh
-	sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
-	sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
-```
-11. Once in your deginated loction. Set up a virtual environment:
-    	1. Create a Virtual Environment:
-   		 ```sh
+	1. place the files in your overlays
+    
+	2. Then move it to your pi using the code below (change pi to your name for your device)
+		```sh
+		sudo mv /boot/overlays/spot.py /home/pi/your_script_directory/
+		sudo mv /boot/overlays/tokens.json /home/pi/your_script_directory/
+		```
+11. Once in your deginated loction. Set up a virtual environment
+    
+    1. Create a Virtual Environment:
+   	```sh
    		python3 -m venv /home/pi/venv
-   		```
-    	2. Activate the Virtual Environment:
-    		```sh
+   	```
+    
+    2. Activate the Virtual Environment:
+    	```sh
    		source /home/pi/venv/bin/activate
    		```
-    	3. Install Required Libraries:
-    		```sh
+    
+    3. Install Required Libraries:
+       ```sh
    		pip install pygame flask requests pillow
    		```
 
-12. Run the script to make sure it works
-   ```sh
-  	python /home/pi/spot.py
-   ```
-13.(Optional) Run script on startup:
-	1. Open crontab editor:
- 	```sh
-  	nano crontab -e
-  	 ```
-    	2. add the following line to the end of the file:
-     	```sh
-  	@reboot /home/pi/venv/bin/python /home/pi/script.py
-  	 ```
-    	Replace:
-		• /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
-		• /home/pi/script.py with the full path to your Python script.
- 	3. Save and exit:
-  		• Press CTRL + O to save.
-		• Press CTRL + X to exit.
-  	4. Reboot to test:
+
+13. Run the script to make sure it works
    	```sh
-  	sudo reboot
-  	 ```
+  	python /home/pi/spot.py
+   	```
+
+14.(Optional) Run script on startup
+
+   1. Open crontab editor:
+ 		```sh
+  		nano crontab -e
+ 		```
+    
+   2. add the following line to the end of the file:
+     	```sh
+  		@reboot /home/pi/venv/bin/python /home/pi/script.py
+  	 	```
+    
+    	Replace:
+		* /home/pi/venv/bin/python with the path to the Python interpreter inside your virtual environment.
+		* /home/pi/spot.py with the full path to your Python script.
+  
+   3. Save and exit:
+  		* Press CTRL + O to save.
+		* Press CTRL + X to exit.
+  
+   4. Reboot to test:
+   		```sh
+  		sudo reboot
+  		```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,7 +199,6 @@ _Below is an example of how you can install and run this code._
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -254,14 +261,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* Spotify
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
