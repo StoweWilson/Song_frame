@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/StoweWilson/Song_frame">
-    <img src="images/IMG_5341.png" alt="AHH" width="80" height="80">
+    <img src="images/front.jpg" alt="AHH" width="350" height="fit-content">
   </a>
 <h1 align="center">Song Frame</h1>
 
@@ -63,8 +63,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 There are countless music visualization tools out there, but I couldn’t find one that perfectly matched my vision—so I decided to create Song Frame. My goal is to deliver a sleek and modern now-playing display that feels both elegant and functional, seamlessly integrating with the Spotify API.
 
 Here’s why this project stands out:
@@ -86,8 +84,24 @@ Of course, there’s always room for improvement. While this version supports Sp
 * Json
 * Spotify Developer (https://developer.spotify.com/)
 
+## Parts Used
+* Raspberry Pi Zero 2 W
+* Waveshare 5 Inch Capacitive Touch Screen LCD (https://www.amazon.com/dp/B0972LZY1W?ref=ppx_yo2ov_dt_b_fed_asin_title)
+* Argon Micro USB Cable Power Supply (https://www.amazon.com/dp/B07MC7B9X3?ref=ppx_yo2ov_dt_b_fed_asin_title)
+* SanDisk 32GB (https://www.amazon.com/dp/B08J4HJ98L?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+* Mini HDMI to HDMI Adapter (https://www.amazon.com/dp/B09MD23K4X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+* USB 2.0 Micro USB Male to USB Female (https://www.amazon.com/dp/B01C6032G0?ref=ppx_yo2ov_dt_b_fed_asin_title)
+# 3D Printed Parts
+*
+## Total Cost
+*$110.03
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<div align="center">
+    <img src="images/front.jpg" alt="AHH" width="350" height="fit-content">
+     <img src="images/back.jpg" alt="AHH" width="350" height="fit-content">	
+</div>
 
 
 <!-- GETTING STARTED -->
@@ -194,28 +208,11 @@ _Below is an example of how you can install and run this code._
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
-## Roadmap
+## Submit Issues
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/StoweWilson/Song_frame/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
