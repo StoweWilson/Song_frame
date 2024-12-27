@@ -20,14 +20,14 @@
   <p align="center">
     Showcases your currently playing song’s album art and title in a sleek, modern design powered by the Spotify API. (Currently supports only Spotify API)
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/StoweWilson/Song_frame/blob/main/spot.py"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://drive.google.com/file/d/1Hhhv69pZ1xaC4CWkyrD31TNWoyb6mu9V/view?usp=sharing">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/StoweWilson/Song_frame/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/StoweWilson/Song_frame/issues">Request Feature</a>
   </p>
 </div>
 
