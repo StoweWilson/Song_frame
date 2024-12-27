@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/StoweWilson/Song_frame">
-    <img src="images/IMG_5341.png" alt="Logo" width="80" height="80">
+    <img src="images/IMG_5341.png" alt="AHH" width="80" height="80">
   </a>
 <h1 align="center">Song Frame</h1>
 
