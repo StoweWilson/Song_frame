@@ -92,9 +92,9 @@ Of course, there’s always room for improvement. While this version supports Sp
 * Mini HDMI to HDMI Adapter (https://www.amazon.com/dp/B09MD23K4X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
 * USB 2.0 Micro USB Male to USB Female (https://www.amazon.com/dp/B01C6032G0?ref=ppx_yo2ov_dt_b_fed_asin_title)
 # 3D Printed Parts
-*
+* https://makerworld.com/en/models/918578
 ## Total Cost
-*$110.03
+* $110.03
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
