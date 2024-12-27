@@ -12,8 +12,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/IMG_5341.HEIC" alt="Logo" width="80" height="80">
+  <a href="https://github.com/StoweWilson/Song_frame">
+    <img src="images/IMG_5341.png" alt="AHH" width="80" height="80">
   </a>
 <h1 align="center">Song Frame</h1>
 
