@@ -10,18 +10,18 @@ import json
 from flask import Flask, request
 
 # Spotify API credentials
-CLIENT_ID = "d75124890f674fe48b0b0353f2e6ae6e"
-CLIENT_SECRET = "1f093c931a73441694808a99a654340d"
+CLIENT_ID = " Add Client Id here"
+CLIENT_SECRET = "add Cleint Secret here"
 REDIRECT_URI = "http://localhost:7777/callback"
 SCOPES = "user-read-currently-playing user-read-recently-played"
 
-# Global variables
+
 access_token = None
 refresh_token = None
 song_data = None
 update_interval = 2  # Fetch new song info every 2 seconds for real-time updates
 
-# Flask app for Spotify authentication
+
 app = Flask(__name__)
 
 # Load tokens from file (if available)
@@ -43,7 +43,7 @@ def save_tokens():
         json.dump({"access_token": access_token, "refresh_token": refresh_token}, f)
     print("Tokens saved successfully.")
 
-# Flask login route
+
 @app.route("/")
 def login():
     auth_url = (
@@ -52,7 +52,7 @@ def login():
     )
     return f'<a href="{auth_url}">Log in to Spotify</a>'
 
-# Flask callback route
+
 @app.route("/callback")
 def callback():
     global access_token, refresh_token
@@ -180,10 +180,9 @@ def main_display():
             screen_width, screen_height = screen.get_size()
 
             # Dynamically calculate album size and font size based on screen size
-            album_size = int(screen_height * 0.5)  # Album size is 40% of screen height
-            font_large_size = int(screen_height * 0.05)  # Font size is 5% of screen height
-            font_small_size = int(screen_height * 0.03)  # Font size is 3% of screen height
-
+            album_size = int(screen_height * 0.5)  
+            font_large_size = int(screen_height * 0.05) 
+            font_small_size = int(screen_height * 0.03) 
 
             # Resize album cover
             album_cover = album_cover.resize((album_size, album_size))  # Make the album square
@@ -194,41 +193,41 @@ def main_display():
             album_image = pygame.image.load(album_cover_path)
 
             # Calculate positions
-            image_x = screen_width // 12  # Album image on the left side
-            image_y = (screen_height - album_size) // 2  # Center album vertically
+            image_x = screen_width // 12 
+            image_y = (screen_height - album_size) // 2  
 
-            text_x = image_x + album_size + 20  # Text starts to the right of the album cover
-            text_width = screen_width - text_x - 20  # Maximum width for text
+            text_x = image_x + album_size + 20  
+            text_width = screen_width - text_x - 20  
 
             # Align text with the middle of the album cover
-            text_y = image_y + (album_size // 2) - (font_large_size // 2)  # Center text vertically
+            text_y = image_y + (album_size // 2) - (font_large_size // 2)  
 
-            # Truncate text if it doesn't fit
+            # adds .... if text doesn't fit
             song_name = truncate_text(song_name, font_large, text_width)
             artist_name = truncate_text(artist_name, font_small, text_width)
 
             # Render text
-            song_text = font_large.render(song_name, True, (255, 255, 255))  # White text
+            song_text = font_large.render(song_name, True, (255, 255, 255)) 
             artist_text = font_small.render(f"by {artist_name}", True, (255, 255, 255))
 
-            # Fill screen with background color
-            screen.fill((30, 30, 30))  # Dark gray background
+            # background color
+            screen.fill((30, 30, 30))  
 
             # Display album cover
             screen.blit(album_image, (image_x, image_y))
 
             # Display text inline with album cover
             screen.blit(song_text, (text_x, text_y))
-            screen.blit(artist_text, (text_x, text_y + font_large_size + 10))  # Place artist name below song title
+            screen.blit(artist_text, (text_x, text_y + font_large_size + 10)) 
 
-        # Update the display
+        
         pygame.display.flip()
 
-        # Limit the frame rate
+        
         clock.tick(30)
 
 if __name__ == "__main__":
-    load_tokens()  # Load saved tokens
+    load_tokens() 
     if access_token and refresh_token:
         Thread(target=fetch_song_data, daemon=True).start()
         main_display()
